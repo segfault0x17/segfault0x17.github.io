@@ -281,12 +281,12 @@
 
     .social-container a {
       font-size: 40px;
-      color: #f30808;
+      color: #fd0202;
       transition: 0.2s;
     }
 
     .social-container a:hover {
-      color: #2fc78d;
+      color: #03fa18;
     }
 
     /* --- RESPONSIVIDADE --- */
