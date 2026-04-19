@@ -269,20 +269,19 @@
 
     .social-container{
       position: fixed;
-      top: 50px;
+      top: 10px;
       right: 30px;
       display: flex;
       gap: 10px;
       transition: 0.2s;
       font-size: 40px;
-      color: #4A4A4A;
       opacity: 0.4;
       z-index: 9999;
       }
 
     .social-container a {
       font-size: 40px;
-      color: #ccc;
+      color: #f30808;
       transition: 0.2s;
     }
 
