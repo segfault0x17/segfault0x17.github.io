@@ -30,21 +30,6 @@ terminal.addEventListener("mouseenter", function() {
   type();
 });
 
-const text2 = "you are already inside[...]";
-const voidtext = document.getElementById("middle-info");
-let j = 0;
-
-function type2() {
-  if (j < text2.length) {
-    voidtext.innerHTML += text2.charAt(j);
-    j++;
-    setTimeout(type2, 25);
-  } else {
-    voidtext.innerHTML += '<span class="cursor"></span>';
-  }
-}
-type2();
-
 
 function loadContent(id) {
   const viewport = document.getElementById('content-viewport');
@@ -59,18 +44,47 @@ function loadContent(id) {
         ${post.content}
       </div>
     `;
+
+    viewport.style.background = 'black';
+    viewport.style.display = 'block';
     btn.style.display = 'block';
   }
 }
 
-// Torna a função global para o 'onclick' do HTML funcionar com módulos
-window.loadContent = loadContent;
 
 
 function backButton() {
-  document.getElementById('content-viewport').innerHTML = '';
-  document.getElementById('voidbutton').style.display = 'none'; // Esconde ao voltar
+  
+  const viewport = document.getElementById('content-viewport');
+  
+  viewport.innerHTML = '';
+  
+  // REMOVE O FUNDO PRETO (torna transparente para ver o wrapper)
+  viewport.style.backgroundColor = 'transparent';
+  viewport.style.display = 'none'; // Esconde a área para não bloquear cliques no wrapper
+  
+  document.getElementById('voidbutton').style.display = 'none';
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+const voidtext = document.getElementById("middle-info");
+let j = 0;
+
+function type2() {
+  const text2 = "you are already inside[...]";
+  if (j < text2.length) {
+    voidtext.innerHTML += text2.charAt(j);
+    j++;
+    setTimeout(type2, 25);
+  } else {
+    voidtext.innerHTML += '<span class="cursor"></span>';
+  }
+
+}
+type2();
+
+
+
+// Torna a função global para o 'onclick' do HTML funcionar com módulos
+window.loadContent = loadContent;
 window.backButton = backButton;

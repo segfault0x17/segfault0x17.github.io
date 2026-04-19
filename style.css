@@ -14,12 +14,31 @@
       min-height: 100vh;
       margin: 0; /* Garante que o body tenha a altura da tela */
       align-items: center;
-      background-image: url(imagens/vecteezy_grunge-monochrome-black-and-white-glitch-textures-for_24149064.jpg);
+      background-image: url(imagens/background.png);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
       background-attachment: fixed;
 
+    }
+
+    .logo-Container{
+      width: 550px;
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0px, black 80px),
+                            linear-gradient(to right, transparent, black 5%, black 85%, transparent),
+                            linear-gradient(to top, transparent 0px, black 10px);
+      mask-image: linear-gradient(to bottom, transparent 0px, black 30px),
+                    linear-gradient(to right, transparent, black 5%, black 85%, transparent),
+                    linear-gradient(to top, transparent 0px, black 10px);
+        
+        /* Essencial para combinar os dois gradientes (horizontal e vertical) */
+      -webkit-mask-composite: source-in;
+      mask-composite: intersect;
+
+      max-width: 100%; /* Nunca será maior que o container pai */
+      height: auto;    /* Mantém a proporção para não achatar */
+      display: block;  /* Remove espaços indesejados abaixo da imagem */
+      margin: 0 auto;  /* Centraliza a logo se precisar */
     }
 
     .wrapper {
@@ -33,63 +52,19 @@
       flex-direction: column;
       min-height: 450px;
       margin-bottom: 3px;
-      background: rgba(11, 15, 14, 0.85);
     }
 
     .wrapper::before{
       content: "";
       position: absolute;
       inset: 0;
-      background-image: url(imagens/20072641.webp);
+      background-image: url(imagens/26129e26f3f55e01b77553fec4809af1.jpg);
       background-position: center;
-      background-attachment: fixed;
-
-      filter: blur(3px) opacity(1);
-      z-index: 0;
     }
 
     .wrapper * {
       position: relative;
       z-index: 1;
-    }
-    
-    /* CYBER + BLACK TITLE */
-    h1 {
-      font-family: "Audiowide", sans-serif;
-      font-size: 50px;
-      letter-spacing: 5px;
-      text-align: center;
-      color: #2fc78d;
-      margin-bottom: 70px;
-      position: relative;
-      max-width: 100%; /* Garante que não passe do wrapper */
-      padding: 0 10px; /* Respiro para a inclinação não cortar as letras */
-      text-shadow:
-        0 0 10px #00ff9f,
-        0 0 15px #0bf098,
-        0 0 25px #003bff;
-
-      transform: skewX(-10deg);
-    }
-
-    h1::before,
-    h1::after {
-      content: attr(data-text);
-      position: absolute;
-      left: 0;
-      width: 100%;
-    }
-
-    h1::before {
-      color: #0ff;
-      transform: translate(-2px, -1px);
-      opacity: 0.8;
-    }
-
-    h1::after {
-      color: #003bff;
-      transform: translate(2px, 1px);
-      opacity: 0.6;
     }
 
     .fragment {
@@ -128,7 +103,7 @@
     }
     
     .meta {
-      font-size: 12px;
+      font-size: 8px;
       font-weight: bold;
       color: #9CA3A1;
       margin-top: 5px;
@@ -140,7 +115,7 @@
     }
     
     .titleContent {
-      font-size: 10px;
+      font-size: 9px;
       color: #9CA3A1;
       margin-top: 5px;
       margin-left: 10px;
@@ -208,7 +183,7 @@
       background: none;
       border: none;
       padding: 0;
-      cursor: pointer; /* Mantém a "mãozinha" ao passar o mouse */
+      cursor: pointer;
       outline: inherit;
       border-radius: 5px;
     }
@@ -234,15 +209,28 @@
       padding: 5px 15px 15px 15px;
       white-space: pre-wrap; /* Mantém a formatação de texto original */
       line-height: 1.3;
-      color: #00FF00;
+      color: #ffffff;
+      transition: background-color 0.2s ease;
+      position: relative;
+      z-index: 10;
     }
+
+    .content-area.is-active {
+      background-color: #000000; /* Preto total */
+      color: #00ff00; /* Verde terminal para garantir a leitura */
+      padding: 20px;
+      border-radius: 5px;
+    }
+
     
     .content-area h2 {
       font-size: 24px; /* Ajuste para o tamanho que desejar */
       margin: 0px;       /* Tira o espaço gigante de cima e baixo */
       margin-top: -20px;
       margin-bottom: 0px;
+      text-align: center;
       text-transform: uppercase;
+      
     }
 
     .content-area small {
@@ -253,15 +241,12 @@
     }
 
     .content-area .texto-artigo{
-      font-size: 12px;
-      line-height: 1.0;
-      color: #00FF00;
-      margin-top: -10px;
-      text-transform: uppercase;
-    }
-    
-    .content-area .texto-artigo p{
+      font-size: 13px;
+      line-height: 1.7;
+      color: #ffffff;
+      margin-top: 15px;
       text-align: left;
+      font-family: monospace;
       overflow-wrap: break-word; /* Quebra a palavra se ela for maior que o container */
       word-break: break-word;    /* Garante a compatibilidade */
       hyphens: auto;
@@ -296,17 +281,13 @@
       body {
         width: 100%; /* Ocupa a largura total */
       }
-
+      .logo-Container {
+          width: 90%; /* No mobile, ela ocupa 80% da largura do wrapper */
+          margin-top: 20px;
+        }
       .wrapper {
         width: 95%; /* Quase toda a tela no mobile */
         min-height: 400px;
-      }
-
-      h1 {
-        font-size: 28px; /* Título menor para não quebrar */
-        letter-spacing: 2px;
-        margin-bottom: 40px;
-        transform: skewX(-15deg); /* Inclinação suave no mobile */
       }
 
       .content-area h2 {
@@ -334,10 +315,6 @@
       .wrapper {
         width: 85%;
       }
-
-      h1 {
-        font-size: 38px;
-      }
     }
 
     /* 3. Tablets em modo paisagem e Laptops pequenos (min 768px) */
@@ -345,27 +322,23 @@
       .wrapper {
         width: 75%;
       }
-
-      h1 {
-        font-size: 42px;
-      }
     }
 
     /* 4. Desktops comuns (min 992px) */
     @media only screen and (min-width: 992px) {
+      
+      .logo-Container {
+        width: 550px;
+       } /* No desktop você fixa um tamanho que fique elegante */
       .wrapper {
-        width: 65%;
-      }
-
-      h1 {
-        font-size: 50px;
+        width: 40%;
       }
     }
 
     /* 5. Telas grandes / UltraWide (min 1200px) */
     @media only screen and (min-width: 1200px) {
       .wrapper {
-        width: 55%; /* Volta ao seu design original */
+        width: 45%; /* Volta ao seu design original */
         max-width: 900px;
       }
     }
