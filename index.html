@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>segfault0x17</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Rajdhani:wght@300;400;500;600;700&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+   
+    <div class="social-container">
+      <div>
+        <a href="https://instagram.com/segfault0x17" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+      </div>
+      <div>
+        <a href="https://www.linkedin.com/in/ewerton-marinho/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+      </div>
+    </div>
+    
+    <h1 data-text="SEGFAULT0x17">SEGFAULT0x17</h1>
+
+    <div class="wrapper">
+      <div class="terminal" id="terminal"></div>
+      <nav class="navigator">
+        <div class="fragment" onclick="loadContent('Welcome')">
+          <div class="meta">[ > __ fragment_000 ]</div>
+          <div class="titleContent">Welcome to.........</div>
+          <div class="overlay">[ unlocked ]</div>
+        </div>
+        <div class="fragment" onclick="loadContent('')">
+          <div class="meta">[ > __ fragment_001 ]</div>
+          <div class="titleContent">void</div>
+          <div class="overlay">[ fragment not found ]</div>
+        </div>
+        <div class="fragment" onclick="loadContent('Polyglot-Files')">
+          <div class="meta">[ > __ fragment_002 ]</div>
+          <div class="titleContent">Polyglot Files</div>
+          <div class="overlay">[ loading… ]</div>
+        </div>
+      </nav>
+
+      <div id="content-viewport" class="content-area"></div>
+
+      <nav class="navbar">
+        <button class="voidbutton" id="voidbutton" onclick="backButton()">//void</button> 
+        <div class="middle-info" id="middle-info"></div>
+      </nav>
+      
+    </div>
+    
+    <footer class="foot">&copy copyleft, SEGFAULT0x17 2026</footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script type="module" src="logic\script.js" ></script>
+
+  </body>
+</html>
