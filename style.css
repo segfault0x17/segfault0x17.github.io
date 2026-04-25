@@ -70,7 +70,8 @@
     .fragment {
       position: relative;
       border: 1px solid #8E8E8E;
-      padding-bottom: 1px;
+      padding-top: 5px;
+      padding-bottom: 5px;
       left: -1px;
       width: 100%;
       cursor: pointer;
@@ -101,19 +102,7 @@
       opacity: 0.8;
       
     }
-    
-    .meta {
-      font-size: 8px;
-      font-weight: bold;
-      color: #9CA3A1;
-      margin-top: 5px;
-      margin-bottom: 5px;
-      margin-left: 10px;
-      transform: skewX(-15deg);
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-    
+ 
     .titleContent {
       font-size: 9px;
       color: #9CA3A1;
