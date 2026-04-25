@@ -54,7 +54,7 @@ function loadContent(id) {
 }
 
 function handleRouting(){
-  const articleId = window.location.hash.slice(1) || 'article-00';
+  const articleId = window.location.hash.slice(1) || 'fragment_000';
 
   if(articleId){
     loadContent(articleId);

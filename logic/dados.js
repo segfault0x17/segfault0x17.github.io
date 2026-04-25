@@ -1,5 +1,5 @@
 export const artigos = {
-  "article-00": {
+  "fragment_000": {
     title: "Introdução",
     date: "19-04-2026",
     content: `
@@ -7,7 +7,7 @@ export const artigos = {
 Então fiquem ligados que mais coisas legais virão.</p>
     `
   },
-  "article-02": {
+  "fragment_002": {
     title: "Ofuscação por Xor e como ela se comporta em um debugger",
     date: "date not knowing",
     content: `
