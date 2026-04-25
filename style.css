@@ -239,7 +239,7 @@
       line-height: 1.7;
       color: #ffffff;
       margin-top: 15px;
-      text-align: justify;
+      text-align: left;
       padding-right: 20%;
       font-family: monospace;
       overflow-wrap: break-word; /* Quebra a palavra se ela for maior que o container */
