@@ -47,11 +47,22 @@ function loadContent(id) {
 
     viewport.style.background = 'black';
     viewport.style.display = 'block';
+    viewport.scrollIntoView({ behavior: 'smooth' });
     btn.style.display = 'block';
+  }
+
+}
+
+function handleRouting(){
+  const articleId = window.location.hash.slice(1) || 'Welcome';
+
+  if(articleId){
+    loadContent(articleId);
   }
 }
 
-
+window.addEventListener('hashchange', handleRouting);
+window.addEventListener('load', handleRouting);
 
 function backButton() {
   
@@ -65,6 +76,7 @@ function backButton() {
   
   document.getElementById('voidbutton').style.display = 'none';
   window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.history.pushState("", document.title, window.location.pathname); // limpa o # da url clicar em /void
 }
 
 const voidtext = document.getElementById("middle-info");
