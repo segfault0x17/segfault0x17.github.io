@@ -124,6 +124,11 @@
       text-transform: uppercase;
     }
 
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
     .terminal {
       font-size: 15px;
       margin-bottom: 15px;
@@ -224,7 +229,7 @@
 
     
     .content-area h2 {
-      font-size: 24px; /* Ajuste para o tamanho que desejar */
+      font-size: 10px; /* Ajuste para o tamanho que desejar */
       margin: 0px;       /* Tira o espaço gigante de cima e baixo */
       margin-top: -20px;
       margin-bottom: 0px;
