@@ -52,19 +52,7 @@
       flex-direction: column;
       min-height: 450px;
       margin-bottom: 3px;
-    }
-
-    .wrapper::before{
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image: url(imagens/26129e26f3f55e01b77553fec4809af1.jpg);
-      background-position: center;
-    }
-
-    .wrapper * {
-      position: relative;
-      z-index: 1;
+      background-color: #000000;
     }
 
     .fragment {
