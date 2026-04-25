@@ -190,6 +190,7 @@
       left: 0;
       bottom: 0;
       width: 100%;
+      font-family: monospace;
       background-color: transparent; /* Um preto com transparência */
       color: #6A0DAD; /* Roxo Pulsação */
       text-align: center;
@@ -288,9 +289,10 @@
       }
 
       .content-area .texto-artigo {
-          font-size: 10px;
+          font-size: 8px;
           line-height: 1.7;
           color: #ffffff;
+          font-family: monospace;
       }
 
       .social-container {
@@ -308,6 +310,10 @@
         font-size: 11px; /* Texto rodapé menor */
       }
     }
+
+      .foot{
+        font-family: monospace;
+      }
 
     /* 2. Tablets e dispositivos em modo retrato (min 600px) */
     @media only screen and (min-width: 600px) {
