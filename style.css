@@ -211,7 +211,6 @@
 
     .content-area.is-active {
       background-color: #000000; /* Preto total */
-      color: #00ff00; /* Verde terminal para garantir a leitura */
       padding: 20px;
       border-radius: 5px;
     }
@@ -276,16 +275,22 @@
         width: 100%; /* Ocupa a largura total */
       }
       .logo-Container {
-          width: 90%; /* No mobile, ela ocupa 80% da largura do wrapper */
+          width: 60%; /* No mobile, ela ocupa 80% da largura do wrapper */
           margin-top: 20px;
         }
       .wrapper {
-        width: 95%; /* Quase toda a tela no mobile */
+        width: 70%; /* Quase toda a tela no mobile */
         min-height: 400px;
       }
 
       .content-area h2 {
-        font-size: 18px;
+        font-size: 10px;
+      }
+
+      .content-area .texto-artigo {
+          font-size: 10px;
+          line-height: 1.7;
+          color: #ffffff;
       }
 
       .social-container {
