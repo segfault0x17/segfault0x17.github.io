@@ -90,15 +90,24 @@
       opacity: 0.8;
       
     }
- 
-    .titleContent {
+
+    .prefix {
       font-size: 9px;
-      color: #9CA3A1;
-      margin-top: 5px;
+      color: #494848;
+      margin-top: 2px;
       margin-left: 10px;
-      transform: skewX(-15deg);
       letter-spacing: 2px;
       text-transform: uppercase;
+    }
+    
+    .titleContent {
+      font-size: 10px;
+      color: #9CA3A1;
+      margin-top: 2px;
+      margin-left: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
     }
 
     a {
@@ -249,12 +258,12 @@
 
     .social-container a {
       font-size: 40px;
-      color: #fd0202;
+      color: #ffffff;
       transition: 0.2s;
     }
 
     .social-container a:hover {
-      color: #03fa18;
+      color: #8c918c;
     }
 
     /* --- RESPONSIVIDADE --- */
