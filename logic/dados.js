@@ -12,6 +12,16 @@ Então fiquem ligados que mais coisas legais virão. Meu foco será binary explo
     date: "27-04-2026",
     content: `
 Ofuscação XOR
+
+1: Introdução
+2: A Ofuscação
+3: Observando no Assembly
+4: O Valor Invisível
+5: Onde ele aparece de verdade
+6: O que isso realmente significa
+7: Final
+
+
 --[ 1.0 Introdução
 
 XOR (exclusive OR) é uma operação bit a bit entre dois operandos.
