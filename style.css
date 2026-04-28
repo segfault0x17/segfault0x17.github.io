@@ -53,6 +53,9 @@
       min-height: 450px;
       margin-bottom: 3px;
       background-color: #000000;
+      background-image: url(imagens/lain404.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
     }
 
     .fragment {
@@ -280,6 +283,7 @@
       .wrapper {
         width: 70%; /* Quase toda a tela no mobile */
         min-height: 400px;
+        background-repeat: repeat-y;
       }
 
       .content-area h2 {
