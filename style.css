@@ -287,6 +287,7 @@
       .wrapper {
         width: 70%; /* Quase toda a tela no mobile */
         min-height: 400px;
+        background-position: center;
         background-repeat: repeat-y;
       }
 
