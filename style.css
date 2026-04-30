@@ -70,6 +70,17 @@
       background: rgba(0, 0, 0, 5);
     }
 
+    .fragmentVOID {
+      position: relative;
+      border: 1px solid #8E8E8E;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      left: -1px;
+      width: 100%;
+      cursor: pointer;
+      background: rgba(0, 0, 0, 5);
+    }
+
     .overlay {
       position: absolute;
       align-items: center;
@@ -92,7 +103,26 @@
       color: #ff3b3b;
       font-size: 0.9em;
       opacity: 0.8;
-      
+    }
+
+    .fragmentVOID:hover .overlay{
+      background: rgba(255, 255, 255, 0.05);
+      color: #ff3b3b;
+      font-size: 0.9em;
+      opacity: 0.8;
+    }
+
+    .fragment:hover{
+      animation: fragment 0.2s infinite;
+    }
+
+    @keyframes fragment {
+      0% { transform: translate(0); }
+      20% { transform: translate(-2px, 1px); }
+      40% { transform: translate(2px, -1px); }
+      60% { transform: translate(-1px, 0); }
+      80% { transform: translate(1px, 1px); }
+      100% { transform: translate(0); }
     }
 
     .prefix {
@@ -287,11 +317,15 @@
       }
 
       .terminal{
-        font-size: 12px;
+        font-size: 9px;
       }
 
       .content-area h2 {
         font-size: 10px;
+      }
+
+      .content-area small {
+        font-size: 6px;
       }
 
       .content-area .texto-artigo {
