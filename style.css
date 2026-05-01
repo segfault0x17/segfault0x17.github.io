@@ -313,6 +313,7 @@
           width: 60%; /* No mobile, ela ocupa 80% da largura do wrapper */
           margin-top: 20px;
         }
+
       .wrapper {
         width: 70%; /* Quase toda a tela no mobile */
         min-height: 400px;
@@ -322,19 +323,27 @@
         font-size: 9px;
       }
 
-      .content-area h2 {
+      .fragment:hover .overlay{
         font-size: 10px;
       }
 
+      .fragmentVOID:hover .overlay{
+        font-size: 12px;
+      }
+
+      .content-area h2 {
+        font-size: 7px;
+      }
+
       .content-area small {
-        font-size: 6px;
+        font-size: 5px;
       }
 
       .content-area .texto-artigo {
           font-size: 8px;
           line-height: 1.7;
           color: #ffffff;
-          font-family: monospace;
+          font-family: "Press Start 2P", system-ui;
       }
 
       .social-container {
@@ -349,7 +358,7 @@
       }
       
       .middle-info {
-        font-size: 11px; /* Texto rodapé menor */
+        font-size: 7px; /* Texto rodapé menor */
       }
     }
 
