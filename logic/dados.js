@@ -200,5 +200,61 @@ Mas no momento que você abre um debugger e acompanha os registradores, a ilusã
 O dado nunca deixou de estar ali.
 Só estava esperando você observar no momento certo.
     `
+  },
+  "fragment_003": {
+    title: "Aquisição de Dump de Memória em Linux",
+    date: "03-05-2026",
+    content: `
+O Acquire Volatile Memory for Linux (AVML) é uma ferramenta de aquisição de memória volátil em espaço de usuário (userland) para a arquitetura X86_64, escrita em Rust e projetada para ser implantada como um binário estático.
+
+O AVML pode ser utilizado para adquirir memória sem o conhecimento prévio da distribuição do sistema operacional ou do kernel do alvo. Não é necessária compilação na máquina de destino ou qualquer tipo de fingerprinting. Suas fontes de memória são:
+
+/dev/crash
+
+/proc/kcore
+
+/dev/mem
+
+Se a fonte de memória não for especificada na linha de comando, o AVML percorrerá as fontes disponíveis até encontrar uma funcional.
+
+Esta ferramenta é extremamente prática, pois é distribuída como um binário único, sem dependências e sem a necessidade de criação de objetos de kernel (módulos). Basta executar o binário, especificar o caminho de saída e você terá a imagem da memória.
+
+Primeiro, precisamos tornar este binário executável; para isso, execute:
+
+chmod +x avml
+
+Ao executar o binário sem fornecer um nome de arquivoo com a extensão desejada obtém-se o seguinte:
+
+error: the following required arguments were not provided:
+  <FILENAME>
+
+Usage: avml FILENAME
+
+For more information, try '--help'.
+
+O arquivo pode ser salvo localmente em qualquer diretório ou em locais remotos, como compartilhamentos de arquivos de rede, etc. Essa funcionalidade é muito útil, pois permite que os analistas realizem a aquisição e gravem os dados diretamente em um compartilhamento remoto, evitando alterações desnecessárias no servidor comprometido.
+
+Vamos ver o AVML em ação:
+
+./avml Linux_Acquisition.raw
+
+Executando este comando, que criará uma imagem de memória chamada "Linux_Acquisition.raw" no mesmo diretório. O prompt é liberado após breve momemto; você não receberá nenhuma mensagem de confirmação indicando que o AVML concluiu o trabalho.
+
+Quando a execução terminar, vamos listar o conteúdo do diretório para verificar se o dump da memória foi realizado ou não.
+
+ls -la                          
+total 2098508
+drwxr-xr-x  2 proxyy proxyy       4096 mai  3 15:00 .
+drwx------ 16 proxyy proxyy       4096 mai  3 14:51 ..
+-rwxrwxr-x  1 proxyy proxyy    1835776 mai  3 14:50 avml
+-rw-------  1 root   root   2147016767 mai  3 15:00 Linux_Acquisition.raw
+
+Aqui podemos ver o nome do arquivo junto com seu tamanho. A memória RAM do sistema Linux de onde ele foi adquirido era de 2,1 GB.
+
+Após a aquisição da memória em sistemas Windows ou Linux, os analistas podem analisá-la utilizando ferramentas como o Redline ou o Volatility. 
+
+Realizar a aquisição de memória é algo importante, simples e de enorme valor forense; por isso, todo analista deve saber como executá-la.
+
+ `
   }
 };
