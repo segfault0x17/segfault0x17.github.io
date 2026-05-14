@@ -31,26 +31,53 @@ terminal.addEventListener("mouseenter", function() {
 });
 
 
-function loadContent(id) {
+async function loadContent(id) {
   const viewport = document.getElementById('content-viewport');
   const btn = document.getElementById('voidbutton');
-  const post = artigos[id];
+  
+  // 1. Tenta buscar no objeto 'artigos' (dados.js)
+  let post = artigos[id];
 
   if (post) {
+    // Se achou no dados.js, renderiza direto
+    renderizar(post);
+  } else {
+    // 2. Se não achou, tenta buscar o arquivo externo na pasta /articles
+    try {
+      const response = await fetch(`articles/${id}.json`);
+      
+      if (!response.ok) throw new Error("Não encontrado");
+      
+      post = await response.json();
+      renderizar(post);
+    } catch (error) {
+      // 3. SE AMBOS FALHAREM: Mostra a imagem de erro
+      viewport.innerHTML = `
+        <div style="text-align: center; color: white; padding: 20px;">
+          <h2>Artigo não encontrado!</h2>
+          <img src="imagens/lain404.png" alt="Erro 404" style="max-width: 100%; margin: 20px 0;">
+          <p>O código "${id}" não corresponde a nenhum conteúdo disponível.</p>
+        </div>
+      `;
+      viewport.style.display = 'block';
+      viewport.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  // Função interna para evitar repetir código de estilo e HTML
+  function renderizar(conteudo) {
     viewport.innerHTML = `
-      <h2>${post.title}</h2>
-      <small>Publicado em: ${post.date}</small>
+      <h2>${conteudo.title}</h2>
+      <small>Publicado em: ${conteudo.date}</small>
       <div class="texto-artigo">
-        ${post.content}
+        ${conteudo.content}
       </div>
     `;
-
     viewport.style.background = 'black';
     viewport.style.display = 'block';
     viewport.scrollIntoView({ behavior: 'smooth' });
     btn.style.display = 'block';
   }
-
 }
 
 function handleRouting(){
