@@ -75,7 +75,7 @@ async function loadContent(id) {
       'sys': 'System Internals',
       'lab': 'Code Experiments',
       'tool': 'Utilitaries',
-      'int': 'Introdutory'
+      'int': 'Introduction'
     };
 
     // Pega a sigla que veio do artigo (ex: "rev"), converte para minúsculo 
