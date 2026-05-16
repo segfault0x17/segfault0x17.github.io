@@ -14,11 +14,11 @@
       min-height: 100vh;
       margin: 0; /* Garante que o body tenha a altura da tela */
       align-items: center;
-      background-image: url(imagens/background.png);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
       background-attachment: fixed;
+      background-color: #000000;
       overflow-y: scroll;
     }
 
@@ -300,6 +300,13 @@
 
     .social-container a:hover {
       color: #8c918c;
+    }
+
+    .categoria-topo{
+      font-size: 8px;
+      position: absolute;
+      display: flex;
+      margin-top: -30px;
     }
 
     /* --- RESPONSIVIDADE --- */
