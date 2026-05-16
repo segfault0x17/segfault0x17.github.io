@@ -66,13 +66,34 @@ async function loadContent(id) {
 
   // Função interna para evitar repetir código de estilo e HTML
   function renderizar(conteudo) {
+    // Dicionário que traduz a sigla para o nome extenso explicativo
+    const dicionarioCategorias = {
+      'rev': 'Reverse Engineering',
+      'pwn': 'Exploitation (Pwn)',
+      'artf': 'Digital Forensics & Artifacts',
+      'mal' : 'Malware Analysis',
+      'sys': 'System Internals',
+      'lab': 'Code Experiments',
+      'tool': 'Utilitaries',
+      'int': 'Introdutory'
+    };
+
+    // Pega a sigla que veio do artigo (ex: "rev"), converte para minúsculo 
+    // e busca no dicionário. Se não achar, usa a própria sigla como padrão.
+    const sigla = conteudo.category.toLowerCase();
+    const nomeCompleto = dicionarioCategorias[sigla] || sigla;
+    
+    const categoriaFormatada = `${nomeCompleto.toUpperCase()}//`;
+
     viewport.innerHTML = `
+      <span class="categoria-topo">${categoriaFormatada}</span>
       <h2>${conteudo.title}</h2>
       <small>Publicado em: ${conteudo.date}</small>
       <div class="texto-artigo">
         ${conteudo.content}
       </div>
     `;
+    
     viewport.style.background = 'black';
     viewport.style.display = 'block';
     viewport.scrollIntoView({ behavior: 'smooth' });

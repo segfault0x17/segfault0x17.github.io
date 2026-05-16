@@ -2,14 +2,16 @@ export const artigos = {
   "fragment_000": {
     title: "Introdução",
     date: "25-04-2026",
+    category: "int",
     content: `
 Nesse espaço irei usar para postar conteúdos mais completos que ficaria extenso para o instagram.
 Então fiquem ligados que mais coisas legais virão. Meu foco será binary exploitation, reverse engineering e forensics.
-    `
+    `,
   },
   "fragment_002": {
     title: "XOR por baixo dos panos: o que o debugger revela",
     date: "27-04-2026",
+    category: "rev",
     content: `
 Ofuscação XOR
 
@@ -204,6 +206,7 @@ Só estava esperando você observar no momento certo.
   "fragment_003": {
     title: "Aquisição de Dump de Memória em Linux",
     date: "03-05-2026",
+    category: "artf",
     content: `
 O Acquire Volatile Memory for Linux (AVML) é uma ferramenta de aquisição de memória volátil em espaço de usuário (userland) para a arquitetura X86_64, escrita em Rust e projetada para ser implantada como um binário estático.
 
@@ -260,6 +263,7 @@ Realizar a aquisição de memória é algo importante, simples e de enorme valor
   "fragment_004":{
     title: "CALL REG & JMP ESP: Os Trampolins Clássicos da Exploração de Binários",
     date: "13-05-2026",
+    category: "pwn",
     content: `
     
 <h2>CALL REG e JMP ESP </h2>
