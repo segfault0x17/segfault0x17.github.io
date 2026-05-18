@@ -6,7 +6,7 @@ export const artigos = {
     content: `
 Pesquisador independente em segurança ofensiva, com interesse em técnicas de anti-debugging, engenharia reversa e 
 análise de binários Windows. Atualmente desenvolvendo estudos e projetos pessoais voltados à compreensão de mecanismos anti-análise e funcionamento interno de aplicações em baixo nível.
-<br>Nesse espaço irei usar para postar conteúdos mais completos que ficaria extenso para o <a href=www.instagram.com/segfault0x17>instagram</a>.
+<br>Nesse espaço irei usar para postar conteúdos mais completos que ficaria extenso para o <a href="https://instagram.com/segfault0x17">instagram</a>.
 <style>
     a {text-decoration: underline}
 </style>
