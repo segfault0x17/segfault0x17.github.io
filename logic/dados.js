@@ -4,13 +4,13 @@ export const artigos = {
     date: "25-04-2026",
     category: "int",
     content: `
-Pesquisador independente em segurança ofensiva, com interesse em técnicas de anti-debugging, engenharia reversa e 
-análise de binários Windows. Atualmente desenvolvendo estudos e projetos pessoais voltados à compreensão de mecanismos anti-análise e funcionamento interno de aplicações em baixo nível.
-<br>Nesse espaço irei usar para postar conteúdos mais completos que ficaria extenso para o <a href="https://instagram.com/ewerton.sh">instagram</a>, também <a href="https://tryhackme.com/p/proxyy">TryHackMe</a> e <a href="https://profile.hackthebox.com/profile/019d3531-ede3-72db-a467-32242c01683c">Hack The Box</a>.
+Pesquisador independente em segurança ofensiva, com interesse em engenharia reversa, análise de binários e ataques web. 
+Atualmente desenvolvendo estudos e projetos pessoais voltados à compreensão de vulnerabilidades de erro numéricos, como integer overflow e underflow, truncation e funcionamento interno de aplicações em baixo nível.
+<br>Nesse espaço irei usar para postar conteúdos mais completos que ficaria extenso para o <a href="https://instagram.com/ewerton.sh">instagram</a>.
+A seguir encontra-se os links para meus perfis nas plataformas <a href="https://tryhackme.com/p/proxyy">TryHackMe</a> e <a href="https://profile.hackthebox.com/profile/019d3531-ede3-72db-a467-32242c01683c">Hack The Box</a>.
 <style>
     a {text-decoration: underline}
 </style>
-Então fiquem ligados que mais coisas legais virão.
     `,
   },
   "fragment_002": {
